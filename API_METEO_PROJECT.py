@@ -18,3 +18,13 @@ long_list=[]
 country_list=[]
 country_code_list=[]
 
+for city in capital_cities:
+    query_result = geocoder.geocode(city)
+    temp_df = pd.json_normalize(query_result)
+    country_list.append(temp_df['components.country'][0])
+    country_code_list.append(temp_df['components.country_code'][0])
+    lat_list.append(temp_df['geometry.lat'][0])
+    long_list.append(temp_df['geometry.lng'][0])
+
+results = pd.DataFrame (list(zip(country_list,country_code_list,capital_cities, lat_list, long_list)), columns = ['country','country_code','capital_cities', 'lat', 'long'])
+print(results)
