@@ -12,3 +12,9 @@ capital_cities = ["Tirana","Andorra la Vella","Yerevan","Vienna","Baku","Minsk",
 
 key = "dd6e7f82498847d296af2990e7dfef4e"  # get api key from:  https://opencagedata.com
 geocoder = OpenCageGeocode(key)
+
+lat_list =[]
+long_list=[]
+country_list=[]
+country_code_list=[]
+
