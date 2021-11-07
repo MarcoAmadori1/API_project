@@ -59,6 +59,7 @@ df_daily_all.columns=columns=['time','weathercode','temperature_2m_max','tempera
 df_daily_all.to_csv('daily.csv')
 
 print("Created daily dataset csv")
+
 #Hourly data pull
 df_hourly_all = pd.DataFrame()
 
