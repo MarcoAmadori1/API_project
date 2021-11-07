@@ -29,7 +29,6 @@ results = pd.DataFrame (list(zip(country_list,country_code_list,capital_cities, 
 print(results)
 
 #Running API requests and saving as .json
-
 #Building Pandas Dataframe from JSON files
 
 base_url = "https://api.open-meteo.com/v1/forecast"
