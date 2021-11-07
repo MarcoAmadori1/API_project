@@ -6,15 +6,15 @@ https://open-meteo.com/en/docs
 Data collection by accessing the API from https://open-meteo.com/en/docs.
 
 # Info about the API:
-The API endpoint /v1/forecast accepts a WGS4 coordinate, 
-a list of weather variables and responds with a JSON hourly 
-weather forecast for 7 days.
+The API endpoint /v1/forecast accepts a WGS4 coordinate, a list of weather variables and responds with a JSON hourly weather forecast for 7 days.
 
 The variables are devided in Hourly variables and Daily variables.
+
 We have chosen the following variables for each, with a database for each one.
 
 # Hourly variables selected
 Most weather variables are given as an instantaneous value for the indicated hour.
+
 Some variables like precipitation are calculated from the preceding hour as and average or sum.
 
 Selected variables | Description | Unit |
@@ -96,8 +96,11 @@ key = "dd6e7f82498847d296af2990e7dfef4e"
 geocoder = OpenCageGeocode(key)
 ```
 Four empty lists (of latitude, longitude, countries' name and countries' codes) are created.
+
 These will be filled with the values got from the OpenCage Geocode API.
+
 Then, these lists, together with the list of capital cities, are zipped into a data frame called "results".
+
 At the end of the process, the string "Created dataframe with EU capital cities coordinates" is printed in the console.
 ```
 lat_list =[]
@@ -118,8 +121,11 @@ print("Created dataframe with EU capital cities coordinates")
 
 ```
 In order to add in the data frame above the url related to every city, a for loop is used. 
+
 It is needed to iterate over every city's latitude and longitude. These have to be added in the url.
+
 The url also contains the parameter "&hourly=" (or "&dayly=", according to the dataset needed) followed by the variables of interest.
+
 Once the iteration is done, the "results" dataframe is converted to a csv file and the string "Created API request urls" is printed in the console.
 
 ```
@@ -133,13 +139,21 @@ print("Created API request urls")
 ```
 
 An empty dataframe called "df_daily_all" is created.
+
 The first for loop iterates over the rows in "results".
+
 The request.get function accesses the API related to each capital city got from the "url" column.
+
 Then, a column cointaining all capital cities' names is created, so it will be possible to link the data to the city they're referred to.
+
 The second for loop iterates over all the daily variables in the "json" file and a column is made out for each of them.
+
 These columns are added to a new empty dataframe called "df1".
+
 Each dataframe related to every city is appended to the "df_daily_all" dataframe with the function "df_daily_all.append".
+
 Finally, for each column the name of the variable is assigned and the final dataframe "df_daily_all" is converted to a csv file called "daily.csv".
+
 When this process is done, the string "Created daily dataset csv" is printed in the console.
 
 ```
@@ -165,6 +179,7 @@ df_daily_all.to_csv('daily.csv')
 print("Created daily dataset csv")
 ```
 The steps above are followed to get the data about daily variables.
+
 However, the same process is used to create a data frame containing data about hourly variables for every city:
 
 ```
