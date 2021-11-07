@@ -46,13 +46,13 @@ for index, row in results.iterrows():
     r = requests.get(row['daily_url'])
     json=r.json()
 
-    city = row['capital_cities']
+    cities = row['capital_cities']
     df1 = pd.DataFrame()
     for x in ['time','weathercode','temperature_2m_max','temperature_2m_min','apparent_temperature_max','apparent_temperature_min','sunrise','sunset','precipitation_sum','precipitation_hours','windspeed_10m_max','windgusts_10m_max','winddirection_10m_dominant','shortwave_radiation_sum']:
         column = pd.json_normalize(json['daily'],record_path=[x])
         df1 = pd.concat([df1, column], axis=1,ignore_index=True)
 
-    df1['capital_cities'] = city
+    df1['capital_cities'] = cities
     df_daily_all = df_daily_all.append(df1, ignore_index=True)
 
 df_daily_all.columns=columns=['time','weathercode','temperature_2m_max','temperature_2m_min','apparent_temperature_max','apparent_temperature_min','sunrise','sunset','precipitation_sum','precipitation_hours','windspeed_10m_max','windgusts_10m_max','winddirection_10m_dominant','shortwave_radiation_sum','country']
@@ -68,13 +68,13 @@ for index, row in results.iterrows():
     r = requests.get(row['hourly_url'])
     json=r.json()
 
-    city = row['capital_cities']
+    cities = row['capital_cities']
     df1 = pd.DataFrame()
     for x in ['time','temperature_2m','relativehumidity_2m','apparent_temperature','pressure_msl','precipitation','weathercode','snow_height','cloudcover','direct_radiation','windspeed_10m','winddirection_10m']:
         column = pd.json_normalize(json['hourly'],record_path=[x])
         df1 = pd.concat([df1, column], axis=1,ignore_index=True)
 
-    df1['capital_cities'] = city
+    df1['capital_cities'] = cities
     df_hourly_all = df_hourly_all.append(df1, ignore_index=True)
 
 df_hourly_all.columns=columns=['time','temperature_2m','relativehumidity_2m','apparent_temperature','pressure_msl','precipitation','weathercode','snow_height','cloudcover','direct_radiation','windspeed_10m','winddirection_10','country']
