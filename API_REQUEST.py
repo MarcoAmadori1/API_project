@@ -55,7 +55,7 @@ for index, row in results.iterrows():
     df1['capital_cities'] = cities
     df_daily_all = df_daily_all.append(df1, ignore_index=True)
 
-df_daily_all.columns=columns=['time','weathercode','temperature_2m_max','temperature_2m_min','apparent_temperature_max','apparent_temperature_min','sunrise','sunset','precipitation_sum','precipitation_hours','windspeed_10m_max','windgusts_10m_max','winddirection_10m_dominant','shortwave_radiation_sum','country']
+df_daily_all.columns=columns=['time','weathercode','temperature_2m_max','temperature_2m_min','apparent_temperature_max','apparent_temperature_min','sunrise','sunset','precipitation_sum','precipitation_hours','windspeed_10m_max','windgusts_10m_max','winddirection_10m_dominant','shortwave_radiation_sum','capital_cities']
 df_daily_all.to_csv('daily.csv')
 
 print("Created daily dataset csv")
@@ -77,7 +77,7 @@ for index, row in results.iterrows():
     df1['capital_cities'] = cities
     df_hourly_all = df_hourly_all.append(df1, ignore_index=True)
 
-df_hourly_all.columns=columns=['time','temperature_2m','relativehumidity_2m','apparent_temperature','pressure_msl','precipitation','weathercode','snow_height','cloudcover','direct_radiation','windspeed_10m','winddirection_10','country']
+df_hourly_all.columns=columns=['time','temperature_2m','relativehumidity_2m','apparent_temperature','pressure_msl','precipitation','weathercode','snow_height','cloudcover','direct_radiation','windspeed_10m','winddirection_10','capital_cities']
 df_hourly_all.to_csv('hourly.csv')
 
 print("Created hourly dataset csv")
