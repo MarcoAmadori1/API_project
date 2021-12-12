@@ -215,4 +215,4 @@ The second one looks at the changing sunrise and sunset rise. Daylights are gett
 The last graphs shows the precipiation sum (mm) toghether with the amount of hours (h) of precipiation.
 ![This is an image](precipitation_sum.png)
 
-The code for the previous graphs can be found in the "Task 2" file of the main repository.
+The code for the previous graphs can be found in the "Task 2 - Python - Code" file of the main repository.
