@@ -4,7 +4,7 @@ import numpy as np
 import pandas as pd
 
 df = pd.read_csv("daily.csv")
-# list of capitals
+#list of capitals
 list_cit = list(df.capital_cities)
 final_list_cit = list(dict.fromkeys(list_cit))
 
