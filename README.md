@@ -206,10 +206,12 @@ print("Created hourly dataset csv")
 ```
 # GRAPHS OF VARIABLES
 To visualize the data, the dates chosen is the "daily.csv" one, because it would give in our opinion more significant results.
+The code of the graphs can be found in the "Task 2 - Python - Code" file of the main repository, it allows to enter an european city from the list and receive the three following graphs.
+
 The first graph shows the change in the average minimum and maximum temperature of a given european country.
 ![This is an image](max_min_t.png)
 
-The second one looks at the changing sunrise and sunset rise. Daylights are getting shorter. 
+The second one looks at the changing sunrise and sunset time. Days are getting shorter. 
 ![This is an image](sunrise_sunset.png)
 
 The last graphs shows the precipiation sum (mm) toghether with the amount of hours (h) of precipiation.
