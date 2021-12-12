@@ -205,4 +205,7 @@ df_hourly_all.to_csv('hourly.csv')
 print("Created hourly dataset csv")
 ```
 # GRAPHS OF VARIABLES
+To visualize the data, the dates chosen is the "daily.csv" one, because it would give in our opinion more significant results.
+The first graph shows the change in the average minimum and maximum temperature of a given european country.
+![This is an image](max_min_t.png)
 
