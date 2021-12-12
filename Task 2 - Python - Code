@@ -28,7 +28,7 @@ if enter_city in final_list_cit:
     plt.legend(handles=[red_patch, blue_patch])
     plt.show()
 
-    ###SUNRISE AND SUNSET
+    ##SUNRISE AND SUNSET
     sunrise = one_city_only["sunrise"]
     sunset = one_city_only["sunset"]
     sunrise_list = sunrise.values.tolist()
