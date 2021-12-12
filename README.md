@@ -204,4 +204,5 @@ df_hourly_all.to_csv('hourly.csv')
 
 print("Created hourly dataset csv")
 ```
+# GRAPHS OF VARIABLES
 
