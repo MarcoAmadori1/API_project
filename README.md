@@ -209,3 +209,10 @@ To visualize the data, the dates chosen is the "daily.csv" one, because it would
 The first graph shows the change in the average minimum and maximum temperature of a given european country.
 ![This is an image](max_min_t.png)
 
+The second one looks at the changing sunrise and sunset rise. Daylights are getting shorter. 
+![This is an image](sunrise_sunset.png)
+
+The last graphs shows the precipiation sum (mm) toghether with the amount of hours (h) of precipiation.
+![This is an image](precipitation_sum.png)
+
+The code for the previous graphs can be found in the "Task 2" file of the main repository.
